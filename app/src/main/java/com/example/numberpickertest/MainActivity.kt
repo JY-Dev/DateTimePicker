@@ -2,9 +2,8 @@ package com.example.numberpickertest
 
 import android.os.Bundle
 import android.widget.Button
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import java.util.*
+import com.example.numberpickertest.picker.DateTimePicker
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,9 +11,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         findViewById<Button>(R.id.test_btn).setOnClickListener {
-            findViewById<DatePicker>(R.id.test).run {
-                Toast.makeText(this@MainActivity,getCurrentDateString(),Toast.LENGTH_SHORT).show()
-            }
+            findViewById<DateTimePicker>(R.id.test).plusFiveMinute()
         }
     }
 }
